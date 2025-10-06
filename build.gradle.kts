@@ -28,6 +28,9 @@ dependencies {
     // mongoDB
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 
+    // client
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
     testImplementation(kotlin("test"))
 }
 
