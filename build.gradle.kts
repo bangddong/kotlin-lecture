@@ -6,6 +6,7 @@ plugins {
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
 
     kotlin("plugin.serialization") version "1.8.0"
+    kotlin("plugin.jpa") version "1.8.0"
 }
 
 group = "org.stduy"

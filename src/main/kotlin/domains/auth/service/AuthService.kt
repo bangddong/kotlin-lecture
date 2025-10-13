@@ -21,7 +21,7 @@ class AuthService (
     private val authUserRepository: AuthUserRepository
 ) {
 
-    fun handleAuth(state: String, code: String): String = Logging.logFor(logger) { log ->
+    fun handleAuth(code: String, state: String): String = Logging.logFor(logger) { log ->
         val provider = state.lowercase()
         log["provider"] = provider
 
@@ -47,5 +47,9 @@ class AuthService (
         }
 
         return@logFor token
+    }
+
+    fun verifyToken(authorization: String) {
+        jwtProvider.verifyToken(authorization.removePrefix("Bearer "))
     }
 }

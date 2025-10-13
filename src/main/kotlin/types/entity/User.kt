@@ -12,7 +12,7 @@ import java.time.LocalDateTime
 data class User (
 
     @Id
-    @Column(name = "ulid", length = 12, nullable = false)
+    @Column(name = "ulid", length = 26)
     val ulid: String,
 
     @Column(name = "username", nullable = false, unique = true, length = 50)
